@@ -2,6 +2,27 @@
 # Neu
 
 
+class Person:
+    # Die Dunder/Magic Methods gehören zum "Data Model" --> gut dokumentiert
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return f"(Person({self.name})"
+
+    def __mul__(self, x):
+        if type(x) is not int:
+            raise Exception("Invalid argument, must be int")
+
+        self.name = self.name * x
+
+
+p = Person("ron")
+# Nur möglich wegen der Dunder-Method/ Magic Method __mul__
+p * 4
+print(p)
+
+"""
 def ensure_within(value, bounds):
     m, M = bounds
     print(type(bounds))
@@ -13,7 +34,7 @@ print(ensure_within(3, {4, 5}))  # bound == set
 print(ensure_within(3, (4, 5)))  # bound == tuple
 
 
-"""
+
 a = 3
 b = [3, 5]
 if (a in b) == True:
