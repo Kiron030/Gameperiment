@@ -8,8 +8,8 @@ def ensure_within(value, bounds):
 
 
 print(ensure_within(3, [4, 5]))  # bound == list
-print(ensure_within(3, (4, 5)))  # bound == list
-print(ensure_within(3, (4, 5)))  # bound == list
+print(ensure_within(3, {4, 5}))  # bound == set
+print(ensure_within(3, (4, 5)))  # bound == tuple
 
 
 """
