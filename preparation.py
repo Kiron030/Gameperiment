@@ -1,6 +1,31 @@
-### CHAINING OF COMPARISSON OPERATORS
-# Neu
+### Experimente nach Rodrigo Gerrao Serreao
 
+
+# Walruss Operator --> seit Python 3.8
+# Wird in assignment expressions verwendet
+
+
+def schwirrende_nullen(n):
+    s = str(n)
+    return len(s) - len(s.rstrip("0"))
+
+
+schwirrende_nullen(2012304560)
+
+
+"""
+while inp := input(" >> "):
+    eval(inp)
+
+
+if (i := input("Was ist dein Befehl?"))[0] == "q" or i == "exit":
+    print("Beende das Programm")
+
+print(a := 3)  # Es geht nicht: print(a = 3)
+
+
+
+# classes
 
 class Person:
     # Die Dunder/Magic Methods gehören zum "Data Model" --> gut dokumentiert
@@ -22,7 +47,7 @@ p = Person("ron")
 p * 4
 print(p)
 
-"""
+
 def ensure_within(value, bounds):
     m, M = bounds
     print(type(bounds))
